@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import fa.training.model.User;
 import fa.training.security.Userprincipal;
 import fa.training.service.UserService;
-import fa.training.util.SecurityUtils;
+import fa.training.lib.util.SecurityUtils;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
