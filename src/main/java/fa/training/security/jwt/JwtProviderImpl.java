@@ -19,7 +19,7 @@ import fa.training.exception.TokenException;
 import fa.training.model.User;
 import fa.training.security.Userprincipal;
 import fa.training.service.UserService;
-import fa.training.util.SecurityUtils;
+import fa.training.lib.util.SecurityUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

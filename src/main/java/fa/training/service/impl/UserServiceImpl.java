@@ -24,7 +24,7 @@ import fa.training.model.User;
 import fa.training.repository.RefreshTokenRepository;
 import fa.training.repository.UserRepository;
 import fa.training.service.UserService;
-import fa.training.util.PasswordCheck;
+import fa.training.lib.util.PasswordCheck;
 
 @Service
 public class UserServiceImpl implements UserService {

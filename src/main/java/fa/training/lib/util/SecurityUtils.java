@@ -1,4 +1,4 @@
-package fa.training.util;
+package fa.training.lib.util;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.util.StringUtils;

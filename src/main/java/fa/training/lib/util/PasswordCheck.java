@@ -1,4 +1,4 @@
-package fa.training.util;
+package fa.training.lib.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
