@@ -1,5 +1,6 @@
 package fa.training.model;
 
+import fa.training.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -51,14 +52,14 @@ public class User {
     @Transient
     private String token;
 
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
-    private RefreshToken rfToken;
-    @Transient
-    private String rfTokenString;
+//    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
+//    private RefreshToken rfToken;
+//    @Transient
+//    private String rfTokenString;
 
-    @Override
-    public String toString() {
-        return rfTokenString + " " + id;
-    }
+//    @Override
+//    public String toString() {
+//        return rfTokenString + " " + id;
+//    }
 
 }
