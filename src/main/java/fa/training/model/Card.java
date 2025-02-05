@@ -15,13 +15,25 @@ import java.util.Date;
 @Builder
 @Table(name = "cards")
 public class Card {
-    private Long cardId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
+    @Column(name = "card_number", unique = true)
+    private String cardNum;
+
+    @Column(name = "account_id", unique = true)
     private Long acctId;
 
+    @Column(name = "card_cvv")
+    private int cardCvvCd;
+
+    @Column(name = "embossed_name")
+    private String embossedName;
+
+    @Column(name = "isActive")
     private boolean isActive;
 
-    private Long userId;
-
+    @Column(name = "expiry_date")
     private Date expiryDate;
 }
