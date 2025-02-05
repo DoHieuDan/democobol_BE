@@ -44,7 +44,7 @@ public class User {
     @Column(name = "last_login")
     private Date lastLogin;
 
-    private char role;
+    private String role;
 
     @Column(name = "is_block")
     private boolean isBlock;
