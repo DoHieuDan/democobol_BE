@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper {
-    public User toUser(UserRequestDTO userRequestDTO){
+    public User toUser(UserRequestDTO userRequestDTO) {
         return User.builder()
                 .userId(userRequestDTO.getUserId())
                 .firstName(userRequestDTO.getFirstName())
@@ -17,7 +17,7 @@ public class UserMapper {
                 .build();
     }
 
-    public UserResponseDTO toUserResponse(User user){
+    public UserResponseDTO toUserResponse(User user) {
         return UserResponseDTO.builder()
                 .userId(user.getUserId())
                 .firstName(user.getFirstName())
@@ -25,6 +25,15 @@ public class UserMapper {
                 .password(user.getPassword())
                 .role(user.getRole())
                 .build();
+    }
+
+    public void updateUser( User user, UserRequestDTO request) {
+        if (request != null) {
+            user.setFirstName(request.getFirstName());
+            user.setLastName(request.getLastName());
+            user.setPassword(request.getPassword());
+            user.setRole(request.getRole());
+        }
     }
 
 }
