@@ -27,4 +27,6 @@ public class UserRequestDTO {
 
     @NotEmpty(message = "User Type can NOT be empty...")
     char role;
+
+    boolean isBlock;
 }

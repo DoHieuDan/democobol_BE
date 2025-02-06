@@ -1,5 +1,7 @@
 package fa.training.service.Impl;
 
+import fa.training.dto.response.UserResponseDTO;
+import fa.training.mapper.UserMapper;
 import fa.training.model.User;
 import fa.training.repository.UserDeleteReository;
 import fa.training.service.DeleteUserService;
@@ -15,16 +17,18 @@ import java.util.Optional;
 public class DeleteUserServiceImpl implements DeleteUserService {
     @Autowired
     UserDeleteReository userRepository;
+    UserMapper userMapper;
 
     @Override
-    public List<User> findByUserId(String userId){
-        List<User> user = userRepository.findByUserId(userId);
-        return userRepository.findByUserId(userId);
+    public void deleteUserById(String userId) {
+        User user = userRepository.findByUserId(userId);
+        user.setBlock(true);
+        userRepository.save(user);
     }
+
     @Override
-    public void deleteUserById(String userId) throws NoResourceFoundException {
-
+    public UserResponseDTO findByUserId(String userId) {
+        User user = userRepository.findByUserId(userId);
+        return userMapper.toUserResponse(user);
     }
-
-
 }
