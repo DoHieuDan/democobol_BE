@@ -2,9 +2,11 @@ package fa.training.controller;
 
 
 import fa.training.dto.request.UserRequestDTO;
+import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.ApiResponse;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.service.UpdateUserService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -18,7 +20,7 @@ public class UpdateUsetController {
     UpdateUserService updateUserService;
 
     @PutMapping("/{userId}")
-    ApiResponse<UserResponseDTO> updateUser(@PathVariable String userId, @RequestBody UserRequestDTO request) {
+    ApiResponse<UserResponseDTO> updateUser(@PathVariable String userId,@Valid @RequestBody UserUpdateRequest request) {
         return ApiResponse.<UserResponseDTO>builder()
                 .result(updateUserService.updateUser(userId, request))
                 .build();

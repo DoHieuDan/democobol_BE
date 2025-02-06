@@ -1,7 +1,9 @@
 package fa.training.mapper;
 
 import fa.training.dto.request.UserRequestDTO;
+import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.UserResponseDTO;
+import fa.training.lib.util.FieldFormat;
 import fa.training.model.User;
 import org.springframework.stereotype.Component;
 
@@ -27,10 +29,10 @@ public class UserMapper {
                 .build();
     }
 
-    public void updateUser( User user, UserRequestDTO request) {
+    public void updateUser(User user, UserUpdateRequest request) {
         if (request != null) {
-            user.setFirstName(request.getFirstName());
-            user.setLastName(request.getLastName());
+            user.setFirstName(FieldFormat.format(20, request.getFirstName()));
+            user.setLastName(FieldFormat.format(20, request.getLastName()));
             user.setPassword(request.getPassword());
             user.setRole(request.getRole());
         }
