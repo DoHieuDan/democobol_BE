@@ -6,36 +6,26 @@ import fa.training.service.DeleteUserService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.resource.NoResourceFoundException;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
-@RequestMapping("/api/nhon")
+@RestController
+@RequestMapping("/api/NV1")
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class DeleteController {
-
-    private DeleteUserService deleteUserService;
-
+    DeleteUserService deleteUserService;
 
     @DeleteMapping("/{userId}")
-    ApiResponse<String> deleteUser(@PathVariable String userId) throws NoResourceFoundException {
-        deleteUserService.deleteUserById(userId);
-        return ApiResponse.<String>builder().result("User has been deleted").build();
+    public ResponseEntity<ApiResponse<Void>> deleteUser(@PathVariable String userId) {
+        ApiResponse<Void> response = deleteUserService.deleteUserById(userId);
+        return new ResponseEntity<>(response, HttpStatus.valueOf(response.getCode()));
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserResponseDTO> getUserById(@PathVariable String userId) {
-        UserResponseDTO userResponse = deleteUserService.findByUserId(userId);
-        if (userResponse == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(userResponse);
+    public ResponseEntity<ApiResponse<UserResponseDTO>> getUserById(@PathVariable String userId) {
+        ApiResponse<UserResponseDTO> response = deleteUserService.findByUserId(userId);
+        return new ResponseEntity<>(response, HttpStatus.valueOf(response.getCode()));
     }
-
 }
