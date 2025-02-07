@@ -25,4 +25,11 @@ public class UpdateUsetController {
                 .result(updateUserService.updateUser(userId, request))
                 .build();
     }
+
+    @GetMapping("/{userId}")
+    ApiResponse<UserResponseDTO> getUserById(@PathVariable String userId){
+        return ApiResponse.<UserResponseDTO>builder()
+                .result(updateUserService.getUserById(userId))
+                .build();
+    }
 }

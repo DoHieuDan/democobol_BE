@@ -24,4 +24,8 @@ public class UpdateUserService {
         userMapper.updateUser(user, request);
         return userMapper.toUserResponse(userRepository.save(user));
     }
+
+    public UserResponseDTO getUserById(String userId) {
+        return userMapper.toUserResponse(userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found...")));
+    }
 }
