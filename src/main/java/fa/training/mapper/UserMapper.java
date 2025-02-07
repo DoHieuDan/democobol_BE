@@ -7,6 +7,8 @@ import fa.training.lib.util.FieldFormat;
 import fa.training.model.User;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 public class UserMapper {
     public User toUser(UserRequestDTO userRequestDTO) {
@@ -35,6 +37,7 @@ public class UserMapper {
             user.setLastName(FieldFormat.format(20, request.getLastName()));
             user.setPassword(request.getPassword());
             user.setRole(request.getRole());
+            user.setUpdatedAt(LocalDateTime.now());
         }
     }
 
