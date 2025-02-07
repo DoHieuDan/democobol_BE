@@ -32,7 +32,7 @@ public class DeleteUserService {
 
     public ApiResponse<UserResponseDTO> findByUserId(String userId) {
         User user = userRepository.findUserByUserId(userId);
-        if (user == null) {
+        if (user == null || user.isBlock()) {
             return new ApiResponse<>(404, "User not found", null);
         }
         UserResponseDTO userResponseDTO = userMapper.toUserResponse(user);
