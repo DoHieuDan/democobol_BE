@@ -23,7 +23,7 @@ public class UserMapper {
                 .build();
     }
 
-    public SecUserData toSecUser(UserRequestDTO userRequestDTO){
+    public SecUserData toSecUser(UserRequestDTO userRequestDTO) {
         return SecUserData.builder()
                 .secUsrId(userRequestDTO.getUserId())
                 .secUsrFname(userRequestDTO.getFirstName())
@@ -33,7 +33,7 @@ public class UserMapper {
                 .build();
     }
 
-    public UserResponseDTO toUserResponse(User user){
+    public UserResponseDTO toUserResponse(User user) {
         return UserResponseDTO.builder()
                 .userId(user.getUserId())
                 .firstName(user.getFirstName())
@@ -52,8 +52,9 @@ public class UserMapper {
             user.setRole(request.getRole());
             user.setUpdatedAt(LocalDateTime.now());
         }
-      
-    public UserResponseDTO toUserResponse(SecUserData secUserData){
+    }
+
+    public UserResponseDTO toUserResponse(SecUserData secUserData) {
         return UserResponseDTO.builder()
                 .userId(secUserData.getSecUsrId())
                 .firstName(secUserData.getSecUsrFname())
@@ -61,6 +62,6 @@ public class UserMapper {
                 .password(secUserData.getSecUsrPwd())
                 .role(secUserData.getSecUsrType())
                 .build();
-    }
 
+    }
 }
