@@ -1,0 +1,650 @@
+ACCT-ID                 : 1
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1940
+ACCT-CREDIT-LIMIT       : 20200
+ACCT-CASH-CREDIT-LIMIT  : 10200
+ACCT-OPEN-DATE          : 2014-11-20
+ACCT-EXPIRAION-DATE     : 2025-05-20
+ACCT-REISSUE-DATE       : 2025-05-20
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 2
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1580
+ACCT-CREDIT-LIMIT       : 61300
+ACCT-CASH-CREDIT-LIMIT  : 54480
+ACCT-OPEN-DATE          : 2013-06-19
+ACCT-EXPIRAION-DATE     : 2024-08-11
+ACCT-REISSUE-DATE       : 2024-08-11
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 3
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1470
+ACCT-CREDIT-LIMIT       : 49090
+ACCT-CASH-CREDIT-LIMIT  : 5380
+ACCT-OPEN-DATE          : 2013-08-23
+ACCT-EXPIRAION-DATE     : 2024-01-10
+ACCT-REISSUE-DATE       : 2024-01-10
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 4
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 400
+ACCT-CREDIT-LIMIT       : 35030
+ACCT-CASH-CREDIT-LIMIT  : 27890
+ACCT-OPEN-DATE          : 2012-11-17
+ACCT-EXPIRAION-DATE     : 2023-12-16
+ACCT-REISSUE-DATE       : 2023-12-16
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 5
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3450
+ACCT-CREDIT-LIMIT       : 38190
+ACCT-CASH-CREDIT-LIMIT  : 24300
+ACCT-OPEN-DATE          : 2012-10-03
+ACCT-EXPIRAION-DATE     : 2025-03-09
+ACCT-REISSUE-DATE       : 2025-03-09
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 6
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2180
+ACCT-CREDIT-LIMIT       : 35840
+ACCT-CASH-CREDIT-LIMIT  : 29480
+ACCT-OPEN-DATE          : 2017-12-23
+ACCT-EXPIRAION-DATE     : 2025-10-08
+ACCT-REISSUE-DATE       : 2025-10-08
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 7
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1930
+ACCT-CREDIT-LIMIT       : 20650
+ACCT-CASH-CREDIT-LIMIT  : 2640
+ACCT-OPEN-DATE          : 2012-10-12
+ACCT-EXPIRAION-DATE     : 2024-12-13
+ACCT-REISSUE-DATE       : 2024-12-13
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 8
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 6050
+ACCT-CREDIT-LIMIT       : 61040
+ACCT-CASH-CREDIT-LIMIT  : 13180
+ACCT-OPEN-DATE          : 2012-01-04
+ACCT-EXPIRAION-DATE     : 2024-05-20
+ACCT-REISSUE-DATE       : 2024-05-20
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 9
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 5600
+ACCT-CREDIT-LIMIT       : 82010
+ACCT-CASH-CREDIT-LIMIT  : 20650
+ACCT-OPEN-DATE          : 2016-08-27
+ACCT-EXPIRAION-DATE     : 2024-12-27
+ACCT-REISSUE-DATE       : 2024-12-27
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 10
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1590
+ACCT-CREDIT-LIMIT       : 54010
+ACCT-CASH-CREDIT-LIMIT  : 44420
+ACCT-OPEN-DATE          : 2015-09-13
+ACCT-EXPIRAION-DATE     : 2023-01-27
+ACCT-REISSUE-DATE       : 2023-01-27
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 11
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2120
+ACCT-CREDIT-LIMIT       : 49980
+ACCT-CASH-CREDIT-LIMIT  : 31750
+ACCT-OPEN-DATE          : 2014-09-12
+ACCT-EXPIRAION-DATE     : 2025-03-12
+ACCT-REISSUE-DATE       : 2025-03-12
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 12
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1760
+ACCT-CREDIT-LIMIT       : 46360
+ACCT-CASH-CREDIT-LIMIT  : 3880
+ACCT-OPEN-DATE          : 2009-06-17
+ACCT-EXPIRAION-DATE     : 2023-07-07
+ACCT-REISSUE-DATE       : 2023-07-07
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 13
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 410
+ACCT-CREDIT-LIMIT       : 75420
+ACCT-CASH-CREDIT-LIMIT  : 49220
+ACCT-OPEN-DATE          : 2017-10-01
+ACCT-EXPIRAION-DATE     : 2024-08-04
+ACCT-REISSUE-DATE       : 2024-08-04
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 14
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 150
+ACCT-CREDIT-LIMIT       : 22540
+ACCT-CASH-CREDIT-LIMIT  : 2120
+ACCT-OPEN-DATE          : 2010-12-04
+ACCT-EXPIRAION-DATE     : 2025-12-11
+ACCT-REISSUE-DATE       : 2025-12-11
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 15
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 4890
+ACCT-CREDIT-LIMIT       : 84410
+ACCT-CASH-CREDIT-LIMIT  : 38330
+ACCT-OPEN-DATE          : 2009-10-06
+ACCT-EXPIRAION-DATE     : 2025-06-09
+ACCT-REISSUE-DATE       : 2025-06-09
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 16
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 7330
+ACCT-CREDIT-LIMIT       : 89220
+ACCT-CASH-CREDIT-LIMIT  : 26320
+ACCT-OPEN-DATE          : 2014-09-11
+ACCT-EXPIRAION-DATE     : 2024-01-25
+ACCT-REISSUE-DATE       : 2024-01-25
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 17
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 330
+ACCT-CREDIT-LIMIT       : 5680
+ACCT-CASH-CREDIT-LIMIT  : 5100
+ACCT-OPEN-DATE          : 2014-05-17
+ACCT-EXPIRAION-DATE     : 2025-03-01
+ACCT-REISSUE-DATE       : 2025-03-01
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 18
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1440
+ACCT-CREDIT-LIMIT       : 29030
+ACCT-CASH-CREDIT-LIMIT  : 14960
+ACCT-OPEN-DATE          : 2018-11-15
+ACCT-EXPIRAION-DATE     : 2023-09-10
+ACCT-REISSUE-DATE       : 2023-09-10
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 19
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 4800
+ACCT-CREDIT-LIMIT       : 69860
+ACCT-CASH-CREDIT-LIMIT  : 37230
+ACCT-OPEN-DATE          : 2011-12-14
+ACCT-EXPIRAION-DATE     : 2025-07-23
+ACCT-REISSUE-DATE       : 2025-07-23
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 20
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3690
+ACCT-CREDIT-LIMIT       : 37670
+ACCT-CASH-CREDIT-LIMIT  : 10400
+ACCT-OPEN-DATE          : 2014-02-27
+ACCT-EXPIRAION-DATE     : 2024-03-13
+ACCT-REISSUE-DATE       : 2024-03-13
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 21
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1120
+ACCT-CREDIT-LIMIT       : 12640
+ACCT-CASH-CREDIT-LIMIT  : 1800
+ACCT-OPEN-DATE          : 2011-10-19
+ACCT-EXPIRAION-DATE     : 2023-01-06
+ACCT-REISSUE-DATE       : 2023-01-06
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 22
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 550
+ACCT-CREDIT-LIMIT       : 85990
+ACCT-CASH-CREDIT-LIMIT  : 47120
+ACCT-OPEN-DATE          : 2016-11-21
+ACCT-EXPIRAION-DATE     : 2025-12-28
+ACCT-REISSUE-DATE       : 2025-12-28
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 23
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1040
+ACCT-CREDIT-LIMIT       : 33770
+ACCT-CASH-CREDIT-LIMIT  : 29040
+ACCT-OPEN-DATE          : 2012-03-15
+ACCT-EXPIRAION-DATE     : 2025-03-18
+ACCT-REISSUE-DATE       : 2025-03-18
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 24
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 4000
+ACCT-CREDIT-LIMIT       : 51740
+ACCT-CASH-CREDIT-LIMIT  : 41290
+ACCT-OPEN-DATE          : 2015-08-08
+ACCT-EXPIRAION-DATE     : 2025-02-11
+ACCT-REISSUE-DATE       : 2025-02-11
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 25
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 610
+ACCT-CREDIT-LIMIT       : 81940
+ACCT-CASH-CREDIT-LIMIT  : 65820
+ACCT-OPEN-DATE          : 2012-10-26
+ACCT-EXPIRAION-DATE     : 2025-07-10
+ACCT-REISSUE-DATE       : 2025-07-10
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 26
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 460
+ACCT-CREDIT-LIMIT       : 21810
+ACCT-CASH-CREDIT-LIMIT  : 13750
+ACCT-OPEN-DATE          : 2009-04-20
+ACCT-EXPIRAION-DATE     : 2024-12-19
+ACCT-REISSUE-DATE       : 2024-12-19
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 27
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2840
+ACCT-CREDIT-LIMIT       : 55720
+ACCT-CASH-CREDIT-LIMIT  : 20750
+ACCT-OPEN-DATE          : 2012-09-30
+ACCT-EXPIRAION-DATE     : 2025-07-13
+ACCT-REISSUE-DATE       : 2025-07-13
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 28
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 680
+ACCT-CREDIT-LIMIT       : 8680
+ACCT-CASH-CREDIT-LIMIT  : 5470
+ACCT-OPEN-DATE          : 2015-05-20
+ACCT-EXPIRAION-DATE     : 2024-05-09
+ACCT-REISSUE-DATE       : 2024-05-09
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 29
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3390
+ACCT-CREDIT-LIMIT       : 55110
+ACCT-CASH-CREDIT-LIMIT  : 43610
+ACCT-OPEN-DATE          : 2015-11-03
+ACCT-EXPIRAION-DATE     : 2024-06-04
+ACCT-REISSUE-DATE       : 2024-06-04
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 30
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 20
+ACCT-CREDIT-LIMIT       : 1200
+ACCT-CASH-CREDIT-LIMIT  : 930
+ACCT-OPEN-DATE          : 2011-08-26
+ACCT-EXPIRAION-DATE     : 2024-06-27
+ACCT-REISSUE-DATE       : 2024-06-27
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 31
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 310
+ACCT-CREDIT-LIMIT       : 11400
+ACCT-CASH-CREDIT-LIMIT  : 10770
+ACCT-OPEN-DATE          : 2017-02-25
+ACCT-EXPIRAION-DATE     : 2025-06-08
+ACCT-REISSUE-DATE       : 2025-06-08
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 32
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 300
+ACCT-CREDIT-LIMIT       : 11750
+ACCT-CASH-CREDIT-LIMIT  : 8460
+ACCT-OPEN-DATE          : 2013-11-10
+ACCT-EXPIRAION-DATE     : 2025-05-19
+ACCT-REISSUE-DATE       : 2025-05-19
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 33
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 4100
+ACCT-CREDIT-LIMIT       : 64040
+ACCT-CASH-CREDIT-LIMIT  : 9510
+ACCT-OPEN-DATE          : 2012-10-11
+ACCT-EXPIRAION-DATE     : 2025-10-07
+ACCT-REISSUE-DATE       : 2025-10-07
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 34
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2530
+ACCT-CREDIT-LIMIT       : 36420
+ACCT-CASH-CREDIT-LIMIT  : 27700
+ACCT-OPEN-DATE          : 2009-05-10
+ACCT-EXPIRAION-DATE     : 2025-10-06
+ACCT-REISSUE-DATE       : 2025-10-06
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 35
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1660
+ACCT-CREDIT-LIMIT       : 19470
+ACCT-CASH-CREDIT-LIMIT  : 15250
+ACCT-OPEN-DATE          : 2018-02-02
+ACCT-EXPIRAION-DATE     : 2025-09-23
+ACCT-REISSUE-DATE       : 2025-09-23
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 36
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1100
+ACCT-CREDIT-LIMIT       : 33280
+ACCT-CASH-CREDIT-LIMIT  : 8390
+ACCT-OPEN-DATE          : 2018-07-18
+ACCT-EXPIRAION-DATE     : 2024-12-23
+ACCT-REISSUE-DATE       : 2024-12-23
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 37
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 70
+ACCT-CREDIT-LIMIT       : 4460
+ACCT-CASH-CREDIT-LIMIT  : 1660
+ACCT-OPEN-DATE          : 2016-09-10
+ACCT-EXPIRAION-DATE     : 2023-10-24
+ACCT-REISSUE-DATE       : 2023-10-24
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 38
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 6120
+ACCT-CREDIT-LIMIT       : 65050
+ACCT-CASH-CREDIT-LIMIT  : 34760
+ACCT-OPEN-DATE          : 2010-08-12
+ACCT-EXPIRAION-DATE     : 2023-07-23
+ACCT-REISSUE-DATE       : 2023-07-23
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 39
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 8430
+ACCT-CREDIT-LIMIT       : 97500
+ACCT-CASH-CREDIT-LIMIT  : 62120
+ACCT-OPEN-DATE          : 2018-08-26
+ACCT-EXPIRAION-DATE     : 2025-09-08
+ACCT-REISSUE-DATE       : 2025-09-08
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 40
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 430
+ACCT-CREDIT-LIMIT       : 58230
+ACCT-CASH-CREDIT-LIMIT  : 16740
+ACCT-OPEN-DATE          : 2010-02-13
+ACCT-EXPIRAION-DATE     : 2023-10-27
+ACCT-REISSUE-DATE       : 2023-10-27
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 41
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3750
+ACCT-CREDIT-LIMIT       : 67210
+ACCT-CASH-CREDIT-LIMIT  : 34290
+ACCT-OPEN-DATE          : 2015-02-07
+ACCT-EXPIRAION-DATE     : 2023-04-24
+ACCT-REISSUE-DATE       : 2023-04-24
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 42
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3020
+ACCT-CREDIT-LIMIT       : 65630
+ACCT-CASH-CREDIT-LIMIT  : 51030
+ACCT-OPEN-DATE          : 2016-09-19
+ACCT-EXPIRAION-DATE     : 2025-09-19
+ACCT-REISSUE-DATE       : 2025-09-19
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 43
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 6100
+ACCT-CREDIT-LIMIT       : 61680
+ACCT-CASH-CREDIT-LIMIT  : 12060
+ACCT-OPEN-DATE          : 2012-04-09
+ACCT-EXPIRAION-DATE     : 2025-08-29
+ACCT-REISSUE-DATE       : 2025-08-29
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 44
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2630
+ACCT-CREDIT-LIMIT       : 68990
+ACCT-CASH-CREDIT-LIMIT  : 44320
+ACCT-OPEN-DATE          : 2018-12-01
+ACCT-EXPIRAION-DATE     : 2024-01-17
+ACCT-REISSUE-DATE       : 2024-01-17
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 45
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1860
+ACCT-CREDIT-LIMIT       : 27190
+ACCT-CASH-CREDIT-LIMIT  : 6880
+ACCT-OPEN-DATE          : 2010-12-31
+ACCT-EXPIRAION-DATE     : 2025-07-09
+ACCT-REISSUE-DATE       : 2025-07-09
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 46
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 3960
+ACCT-CREDIT-LIMIT       : 70070
+ACCT-CASH-CREDIT-LIMIT  : 54380
+ACCT-OPEN-DATE          : 2013-09-06
+ACCT-EXPIRAION-DATE     : 2025-06-20
+ACCT-REISSUE-DATE       : 2025-06-20
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 47
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 320
+ACCT-CREDIT-LIMIT       : 23380
+ACCT-CASH-CREDIT-LIMIT  : 1590
+ACCT-OPEN-DATE          : 2014-04-03
+ACCT-EXPIRAION-DATE     : 2025-08-23
+ACCT-REISSUE-DATE       : 2025-08-23
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 48
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 2260
+ACCT-CREDIT-LIMIT       : 23060
+ACCT-CASH-CREDIT-LIMIT  : 6120
+ACCT-OPEN-DATE          : 2017-03-18
+ACCT-EXPIRAION-DATE     : 2025-02-06
+ACCT-REISSUE-DATE       : 2025-02-06
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 49
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 1000
+ACCT-CREDIT-LIMIT       : 90480
+ACCT-CASH-CREDIT-LIMIT  : 48070
+ACCT-OPEN-DATE          : 2019-04-06
+ACCT-EXPIRAION-DATE     : 2023-09-17
+ACCT-REISSUE-DATE       : 2023-09-17
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
+ACCT-ID                 : 50
+ACCT-ACTIVE-STATUS      : Y
+ACCT-CURR-BAL           : 4920
+ACCT-CREDIT-LIMIT       : 61690
+ACCT-CASH-CREDIT-LIMIT  : 45870
+ACCT-OPEN-DATE          : 2011-04-22
+ACCT-EXPIRAION-DATE     : 2023-03-09
+ACCT-REISSUE-DATE       : 2023-03-09
+ACCT-CURR-CYC-CREDIT    : 0
+ACCT-CURR-CYC-DEBIT     : 0
+ACCT-GROUP-ID           : A000000000
+-------------------------------------------------
+
