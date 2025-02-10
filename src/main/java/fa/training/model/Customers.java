@@ -19,7 +19,8 @@ import lombok.experimental.FieldDefaults;
 public class Customers {
 
     @Id
-    long cusId;
+    @Column(name = "id")
+    int cusId;
 
     @Column(name = "addr_country_cd")
     String addressCountryCode;

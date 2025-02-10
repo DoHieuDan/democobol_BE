@@ -1,4 +1,7 @@
 package fa.training.repository;
 
-public interface CardRepository {
+import fa.training.model.Card;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CardRepository extends JpaRepository<Card, String> {
 }
