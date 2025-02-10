@@ -4,6 +4,7 @@ import fa.training.dto.request.UserRequestDTO;
 import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.lib.util.FieldFormat;
+import fa.training.model.SecUserData;
 import fa.training.model.User;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +22,17 @@ public class UserMapper {
                 .build();
     }
 
-    public UserResponseDTO toUserResponse(User user) {
+    public SecUserData toSecUser(UserRequestDTO userRequestDTO){
+        return SecUserData.builder()
+                .secUsrId(userRequestDTO.getUserId())
+                .secUsrFname(userRequestDTO.getFirstName())
+                .secUsrLname(userRequestDTO.getLastName())
+                .secUsrPwd(userRequestDTO.getPassword())
+                .secUsrType(userRequestDTO.getRole())
+                .build();
+    }
+
+    public UserResponseDTO toUserResponse(User user){
         return UserResponseDTO.builder()
                 .userId(user.getUserId())
                 .firstName(user.getFirstName())
@@ -39,6 +50,15 @@ public class UserMapper {
             user.setRole(request.getRole());
             user.setUpdatedAt(LocalDateTime.now());
         }
+      
+    public UserResponseDTO toUserResponse(SecUserData secUserData){
+        return UserResponseDTO.builder()
+                .userId(secUserData.getSecUsrId())
+                .firstName(secUserData.getSecUsrFname())
+                .lastName(secUserData.getSecUsrLname())
+                .password(secUserData.getSecUsrPwd())
+                .role(secUserData.getSecUsrType())
+                .build();
     }
 
 }
