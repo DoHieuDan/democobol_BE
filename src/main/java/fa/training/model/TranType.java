@@ -11,6 +11,7 @@ import lombok.Data;
 @Table(name = "tran_type")
 public class TranType {
     @Id
+    @Column(name = "type")
     private String tranType;
 
     @Column(name = "type_desc")

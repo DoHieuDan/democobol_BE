@@ -18,6 +18,7 @@ import lombok.Data;
 public class CardXrefRecord {
 
     @Id
+    @Column(name = "num")
     private String xrefCardNum;
 
     @Column(name = "cust_id")
