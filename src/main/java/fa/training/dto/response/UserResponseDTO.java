@@ -15,5 +15,5 @@ public class UserResponseDTO {
     String userId;
     String password;
     boolean isBlock;
-    char role;
+    String role;
 }

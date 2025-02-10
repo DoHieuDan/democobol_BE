@@ -1,5 +1,6 @@
 package fa.training.dto.request;
 
+
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -12,11 +13,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserRequestDTO {
-    @NotEmpty(message = "User ID can NOT be empty...")
-    @Size(min = 8, max = 8, message = "User ID must be exactly 8 characters...")
-    String userId;
-
+public class UserUpdateRequest {
     @NotEmpty(message = "First Name can NOT be empty...")
     String firstName;
 
@@ -27,8 +24,8 @@ public class UserRequestDTO {
     @Size(min = 8, max = 8, message = "Password must be exactly 8 characters...")
     String password;
 
-    boolean isBlock;
-
+    //    @NotNull(message = "User Type can NOT be empty...")
+//    char role;
     @NotNull(message = "User Type can NOT be empty...")
     @Pattern(regexp = "[AU]", message = "User type must be 'A' or 'U'")
     String role;

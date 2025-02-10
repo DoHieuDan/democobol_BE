@@ -2,22 +2,35 @@ package fa.training.model;
 
 import fa.training.lib.constants.ValueConst;
 import fa.training.lib.util.FieldFormat;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 
-@Getter
-@Setter
+@Entity
+@Data
+@AllArgsConstructor
+@Builder
+@Table(name = "card_xref")
 public class CardXrefRecord {
 
-  private String xrefCardNum;
-  private int xrefCustId;
-  private long xrefAcctId;
-  private String filler1;
-   
-  public  CardXrefRecord(){
-      xrefCardNum = FieldFormat.format(16, ValueConst.SPACE);
-      xrefCustId = 0;
-      xrefAcctId = 0;
-      filler1 = FieldFormat.format(14, ValueConst.SPACE);
-  }
+    @Id
+    private String xrefCardNum;
+
+    @Column(name = "cust_id")
+    private long xrefCustId;
+
+    @Column(name = "acct_id")
+    private long xrefAcctId;
+//    private String filler1;
+
+    public CardXrefRecord() {
+        xrefCardNum = FieldFormat.format(16, ValueConst.SPACE);
+        xrefCustId = 0;
+        xrefAcctId = 0;
+//        filler1 = FieldFormat.format(14, ValueConst.SPACE);
+    }
 }

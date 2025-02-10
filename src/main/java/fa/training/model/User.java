@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -39,12 +40,12 @@ public class User {
     private Date createdAt;
 
     @Column(name = "updated_at")
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
 
     @Column(name = "last_login")
     private Date lastLogin;
 
-    private char role;
+    private String role;
 
     @Column(name = "is_block")
     private boolean isBlock;
