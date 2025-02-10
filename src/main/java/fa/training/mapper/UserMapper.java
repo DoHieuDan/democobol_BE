@@ -19,6 +19,7 @@ public class UserMapper {
                 .lastName(userRequestDTO.getLastName())
                 .password(userRequestDTO.getPassword())
                 .role(userRequestDTO.getRole())
+                .isBlock(userRequestDTO.isBlock())
                 .build();
     }
 
@@ -39,6 +40,7 @@ public class UserMapper {
                 .lastName(user.getLastName())
                 .password(user.getPassword())
                 .role(user.getRole())
+                .isBlock(user.isBlock())
                 .build();
     }
 

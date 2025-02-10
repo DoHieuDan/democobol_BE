@@ -27,8 +27,8 @@ public class UserRequestDTO {
     @Size(min = 8, max = 8, message = "Password must be exactly 8 characters...")
     String password;
 
-//    @NotNull(message = "User Type can NOT be empty...")
-//    char role;
+    boolean isBlock;
+
     @NotNull(message = "User Type can NOT be empty...")
     @Pattern(regexp = "[AU]", message = "User type must be 'A' or 'U'")
     String role;
