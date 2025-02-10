@@ -10,11 +10,11 @@ import java.io.Serializable;
 @Data
 public class TranCatBalId implements Serializable {
     @Column(name = "acct_id")
-    private long tranCatAccId;
+    private int tranCatAccId;
     @Column(name = "type_cd")
     private String tranCatTypeCd;
     @Column(name = "cd")
-    private int tranCatCd;
+    private short tranCatCd;
 
     public TranCatBalId( ){
         tranCatAccId = 0;
