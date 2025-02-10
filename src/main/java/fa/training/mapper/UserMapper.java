@@ -62,6 +62,6 @@ public class UserMapper {
                 .password(secUserData.getSecUsrPwd())
                 .role(secUserData.getSecUsrType())
                 .build();
-    }
 
+    }
 }
