@@ -12,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -27,5 +29,10 @@ public class UpdateUserService {
 
     public UserResponseDTO getUserById(String userId) {
         return userMapper.toUserResponse(userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found...")));
+    }
+
+    public List<UserResponseDTO> getUserList() {
+        return userRepository.findAll().stream()
+                .map(userMapper::toUserResponse).toList();
     }
 }

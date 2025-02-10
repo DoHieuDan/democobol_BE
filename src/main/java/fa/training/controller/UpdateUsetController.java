@@ -12,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/user")
 @RequiredArgsConstructor
@@ -23,6 +25,7 @@ public class UpdateUsetController {
     ApiResponse<UserResponseDTO> updateUser(@PathVariable String userId,@Valid @RequestBody UserUpdateRequest request) {
         return ApiResponse.<UserResponseDTO>builder()
                 .result(updateUserService.updateUser(userId, request))
+                .message("User " + userId + " has been updated ...")
                 .build();
     }
 
@@ -30,6 +33,14 @@ public class UpdateUsetController {
     ApiResponse<UserResponseDTO> getUserById(@PathVariable String userId){
         return ApiResponse.<UserResponseDTO>builder()
                 .result(updateUserService.getUserById(userId))
+                .build();
+    }
+    @GetMapping
+    ApiResponse<List<UserResponseDTO>>getUserList(){
+        return ApiResponse.<List<UserResponseDTO>>builder()
+                .code(200)
+                .result(updateUserService.getUserList())
+                .message("")
                 .build();
     }
 }
