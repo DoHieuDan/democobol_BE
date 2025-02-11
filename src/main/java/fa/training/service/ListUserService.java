@@ -1,9 +1,12 @@
 package fa.training.service;
 
+import fa.training.dto.response.UserPageResponseDTO;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.mapper.UserMapper;
+import fa.training.model.User;
 import fa.training.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -22,15 +25,36 @@ public class ListUserService {
     @Autowired
     private UserMapper userMapper;
 
-    public List<UserResponseDTO> Paging (Integer size, Integer page) {
-        if (size == null || page == null) {
-            size = 1;
-            page = 1;
-        }
-        Pageable pageable = PageRequest.of(page - 1, size);
-        return userRepository.findAll(pageable).getContent().stream()
-                .map(a -> userMapper.toUserResponse(a)).collect(Collectors.toList());
+//    public List<UserResponseDTO> Paging (Integer size, Integer page) {
+//        if (size == null || page == null) {
+//            size = 1;
+//            page = 1;
+//        }
+//        Pageable pageable = PageRequest.of(page - 1, size);
+//        return userRepository.findAll(pageable).getContent().stream()
+//                .map(a -> userMapper.toUserResponse(a)).collect(Collectors.toList());
+//    }
+public UserPageResponseDTO Paging(Integer size, Integer page) {
+    if (size == null || size <= 0) {
+        size = 10; // Mặc định mỗi trang có 10 user
     }
+    if (page == null || page <= 0) {
+        page = 1; // Trang mặc định là trang đầu tiên
+    }
+
+    Pageable pageable = PageRequest.of(page - 1, size);
+    Page<User> userPage = userRepository.findAll(pageable);
+
+    List<UserResponseDTO> userDTOs = userPage.getContent().stream()
+            .map(userMapper::toUserResponse) // Chuyển đổi User -> UserResponseDTO
+            .collect(Collectors.toList());
+
+    return UserPageResponseDTO.builder()
+            .users(userDTOs)
+            .totalUsers(userPage.getTotalElements()) // Tổng số user trong database
+            .totalPages(userPage.getTotalPages()) // Tổng số trang
+            .build();
+}
 
     public List<UserResponseDTO> findAll() {
         try {

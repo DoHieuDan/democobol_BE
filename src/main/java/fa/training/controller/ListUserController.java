@@ -1,5 +1,6 @@
 package fa.training.controller;
 
+import fa.training.dto.response.UserPageResponseDTO;
 import fa.training.service.ListUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,9 @@ public class ListUserController {
     private ListUserService listUserService;
 
     @GetMapping("/{size}/{page}")
-    public ResponseEntity<?> findAllUserPage(@PathVariable("size") Integer size, @PathVariable("page") Integer page) {
+    public ResponseEntity<UserPageResponseDTO> findAllUserPage(
+            @PathVariable("size") Integer size,
+            @PathVariable("page") Integer page) {
         return ResponseEntity.ok(listUserService.Paging(size, page));
     }
 
