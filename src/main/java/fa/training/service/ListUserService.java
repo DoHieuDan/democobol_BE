@@ -35,24 +35,22 @@ public class ListUserService {
 //                .map(a -> userMapper.toUserResponse(a)).collect(Collectors.toList());
 //    }
 public UserPageResponseDTO Paging(Integer size, Integer page) {
-    if (size == null || size <= 0) {
-        size = 10; // Mặc định mỗi trang có 10 user
-    }
-    if (page == null || page <= 0) {
-        page = 1; // Trang mặc định là trang đầu tiên
-    }
+    if (size == null || page == null) {
+            size = 1;
+            page = 1;
+        }
 
     Pageable pageable = PageRequest.of(page - 1, size);
     Page<User> userPage = userRepository.findAll(pageable);
 
     List<UserResponseDTO> userDTOs = userPage.getContent().stream()
-            .map(userMapper::toUserResponse) // Chuyển đổi User -> UserResponseDTO
+            .map(userMapper::toUserResponse)
             .collect(Collectors.toList());
 
     return UserPageResponseDTO.builder()
             .users(userDTOs)
-            .totalUsers(userPage.getTotalElements()) // Tổng số user trong database
-            .totalPages(userPage.getTotalPages()) // Tổng số trang
+            .totalUsers(userPage.getTotalElements())
+            .totalPages(userPage.getTotalPages())
             .build();
 }
 
