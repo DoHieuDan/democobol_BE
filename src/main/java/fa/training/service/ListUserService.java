@@ -50,7 +50,7 @@ public UserPageResponseDTO Paging(Integer size, Integer page) {
     return UserPageResponseDTO.builder()
             .users(userDTOs)
             .totalUsers(userPage.getTotalElements())
-            .currentPages(page)
+            .currentPage(page)
             .totalPages(userPage.getTotalPages())
             .build();
 }
