@@ -10,6 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UserPageResponseDTO {
     private List<UserResponseDTO> users;
+    private int currentPage;
     private long totalUsers;
     private int totalPages;
 }
