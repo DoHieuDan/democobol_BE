@@ -39,4 +39,9 @@ public class SecUserData_Accessor {
       secUserData.setSecUsrType(ValueConst.SPACE);
       secUserData.setSecUsrFiller(FieldFormat.format(23, ValueConst.SPACE));
   }
+    public static SecUserData parseSecUserData(String value) {
+        SecUserData secUserData = new SecUserData();
+        setSecUserData(secUserData, value);
+        return secUserData;
+    }
 }

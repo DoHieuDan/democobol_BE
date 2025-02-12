@@ -46,7 +46,14 @@ public class UserController {
                 .message("User " + userId + " has been updated ...")
                 .build();
     }
-
+    @PutMapping("/user-sec-file/{userId}")
+    ApiResponse<UserResponseDTO> updateUserSecFile(@PathVariable String userId,@Valid @RequestBody UserUpdateRequest request) {
+        return ApiResponse.<UserResponseDTO>builder()
+                .result(userService.updateUserSecFile(userId,request))
+                .message("User " + userId + " has been updated ...")
+                .code(200)
+                .build();
+    }
     @GetMapping
     ApiResponse<List<UserResponseDTO>>getUserList(){
         return ApiResponse.<List<UserResponseDTO>>builder()

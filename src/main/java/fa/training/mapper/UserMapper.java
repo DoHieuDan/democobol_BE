@@ -32,6 +32,14 @@ public class UserMapper {
                 .secUsrType(userRequestDTO.getRole())
                 .build();
     }
+    public SecUserData toSecUser(UserUpdateRequest request) {
+        return SecUserData.builder()
+                .secUsrFname(request.getFirstName())
+                .secUsrLname(request.getLastName())
+                .secUsrPwd(request.getPassword())
+                .secUsrType(request.getRole())
+                .build();
+    }
 
     public UserResponseDTO toUserResponse(User user) {
         return UserResponseDTO.builder()

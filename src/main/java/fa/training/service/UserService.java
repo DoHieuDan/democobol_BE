@@ -88,6 +88,55 @@ public class UserService {
         return userMapper.toUserResponse(userRepository.save(user));
     }
 
+    public UserResponseDTO updateUserSecFile(String id, UserUpdateRequest request) {
+        // Mở file để chỉnh sửa
+        FileAccessBase userSecFile = new FileAccessBase(userSecFilePath);
+        userSecFile.open(FileOpenMode.IN);
+
+        StringBuilder fileContent = new StringBuilder();
+        boolean isUserFound = false;
+
+        // Đọc từng dòng trong file
+        while (!userSecFile.isEOF()) {
+            userSecFile.readLine();
+            String line = userSecFile.getCurrentLine();
+            // Kiểm tra nếu dòng này là của người dùng với id tương ứng
+            if (line != null && line.length() >= 8 && line.substring(0, 8).trim().equals(id)) {
+                SecUserData userData = SecUserData_Accessor.parseSecUserData(line);  // Chuyển đổi dòng thành đối tượng SecUserData
+
+                // Cập nhật thông tin người dùng
+                userData.setSecUsrFname(FieldFormat.format(20, request.getFirstName()));
+                userData.setSecUsrLname(FieldFormat.format(20, request.getLastName()));
+                userData.setSecUsrPwd(request.getPassword());
+                userData.setSecUsrType(request.getRole());
+
+                // Thay đổi dòng dữ liệu
+                line = SecUserData_Accessor.getSecUserData(userData);
+                isUserFound = true;
+            }
+
+            // Ghi lại dòng vào StringBuilder
+            if (line != null) {
+                fileContent.append(line).append(System.lineSeparator());
+            }
+        }
+
+        userSecFile.close();
+
+        if (!isUserFound) {
+            throw new RuntimeException("User ID not found...");
+        }
+
+        // Mở lại file để ghi dữ liệu đã cập nhật
+        userSecFile.open(FileOpenMode.OUT);
+        userSecFile.write(fileContent.toString());
+        userSecFile.close();
+
+        // Trả về thông tin người dùng đã cập nhật
+        SecUserData updatedUserData = SecUserData_Accessor.parseSecUserData(fileContent.toString());
+        return userMapper.toUserResponse(updatedUserData);
+    }
+
     public UserResponseDTO getUserById(String userId) {
         return userMapper.toUserResponse(userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found...")));
     }

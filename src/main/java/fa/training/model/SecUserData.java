@@ -7,6 +7,8 @@ import lombok.*;
 @Setter
 @Getter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class SecUserData {
 
   private String secUsrId;
