@@ -5,6 +5,7 @@ import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,9 +17,11 @@ public class MockApplication implements CommandLineRunner {
 	private JobLauncher jobLauncher;
 
 	@Autowired
+	@Qualifier("cardJob")
 	private Job cardJob;
 
 	@Autowired
+	@Qualifier("accountJob")
 	private Job accountJob;
 
 	public static void main(String[] args) {
@@ -31,6 +34,5 @@ public class MockApplication implements CommandLineRunner {
 				.addLong("timeslap", System.currentTimeMillis())
 				.toJobParameters();
 		jobLauncher.run(accountJob, jobParameters);
-		jobLauncher.run(cardJob, jobParameters);
 	}
 }

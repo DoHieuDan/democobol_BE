@@ -4,6 +4,7 @@ import fa.training.accessor.SecUserData_Accessor;
 import fa.training.dto.request.UserRequestDTO;
 import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.ApiResponse;
+import fa.training.dto.response.UserPageResponseDTO;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.lib.constants.ValueConst;
 import fa.training.lib.file.FileAccessBase;
@@ -16,10 +17,16 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -60,7 +67,7 @@ public class UserService {
 
         while (!userSecFile.isEOF()) {
             userSecFile.readLine();
-            if (userSecFile.getCurrentLine().substring(0, 8).equals(userId)) {
+            if (userSecFile.getCurrentLine() != null && userSecFile.getCurrentLine().substring(0, 8).equals(userId)) {
                 userSecFile.close();
                 return true;
             }
@@ -88,6 +95,55 @@ public class UserService {
         return userMapper.toUserResponse(userRepository.save(user));
     }
 
+    public UserResponseDTO updateUserSecFile(String id, UserUpdateRequest request) {
+        // Mở file để chỉnh sửa
+        FileAccessBase userSecFile = new FileAccessBase(userSecFilePath);
+        userSecFile.open(FileOpenMode.IN);
+
+        StringBuilder fileContent = new StringBuilder();
+        boolean isUserFound = false;
+
+        // Đọc từng dòng trong file
+        while (!userSecFile.isEOF()) {
+            userSecFile.readLine();
+            String line = userSecFile.getCurrentLine();
+            // Kiểm tra nếu dòng này là của người dùng với id tương ứng
+            if (line != null && line.length() >= 8 && line.substring(0, 8).trim().equals(id)) {
+                SecUserData userData = SecUserData_Accessor.parseSecUserData(line);  // Chuyển đổi dòng thành đối tượng SecUserData
+
+                // Cập nhật thông tin người dùng
+                userData.setSecUsrFname(FieldFormat.format(20, request.getFirstName()));
+                userData.setSecUsrLname(FieldFormat.format(20, request.getLastName()));
+                userData.setSecUsrPwd(request.getPassword());
+                userData.setSecUsrType(request.getRole());
+
+                // Thay đổi dòng dữ liệu
+                line = SecUserData_Accessor.getSecUserData(userData);
+                isUserFound = true;
+            }
+
+            // Ghi lại dòng vào StringBuilder
+            if (line != null) {
+                fileContent.append(line).append(System.lineSeparator());
+            }
+        }
+
+        userSecFile.close();
+
+        if (!isUserFound) {
+            throw new RuntimeException("User ID not found...");
+        }
+
+        // Mở lại file để ghi dữ liệu đã cập nhật
+        userSecFile.open(FileOpenMode.OUT);
+        userSecFile.write(fileContent.toString());
+        userSecFile.close();
+
+        // Trả về thông tin người dùng đã cập nhật
+        SecUserData updatedUserData = SecUserData_Accessor.parseSecUserData(fileContent.toString());
+        return userMapper.toUserResponse(updatedUserData);
+    }
+
     public UserResponseDTO getUserById(String userId) {
         return userMapper.toUserResponse(userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found...")));
     }
@@ -98,14 +154,13 @@ public class UserService {
     }
 
     public ApiResponse<Void> deleteUserById(String userId) {
-//        User user = userRepository.findUserByUserId(userId);
         User user = userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found..."));
-        if (user == null) {
+        if (user.isBlock()) {
             return new ApiResponse<>(404, "User not found", null);
         }
         user.setBlock(true);
         userRepository.save(user);
-        return new ApiResponse<>(200, "User successfully blocked", null);
+        return new ApiResponse<>(200, "User deleted successfully", null);
     }
 
     public ApiResponse<UserResponseDTO> findByUserId(String userId) {
@@ -115,5 +170,27 @@ public class UserService {
         }
         UserResponseDTO userResponseDTO = userMapper.toUserResponse(user.orElse(null));
         return new ApiResponse<>(200, "User found", userResponseDTO);
+    }
+
+    public UserPageResponseDTO Paging(Integer size, Integer page) {
+        if (size == null || page == null) {
+            size = 1;
+            page = 1;
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size);
+        Page<User> userPage = userRepository.findAll(pageable);
+
+        List<UserResponseDTO> userDTOs = userPage.getContent().stream()
+                .filter(user -> !user.isBlock())
+                .map(userMapper::toUserResponse)
+                .collect(Collectors.toList());
+
+        return UserPageResponseDTO.builder()
+                .users(userDTOs)
+                .totalUsers(userPage.getTotalElements())
+                .currentPage(page)
+                .totalPages(userPage.getTotalPages())
+                .build();
     }
 }
