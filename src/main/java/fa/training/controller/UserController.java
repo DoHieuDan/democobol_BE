@@ -3,6 +3,7 @@ package fa.training.controller;
 import fa.training.dto.request.UserRequestDTO;
 import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.ApiResponse;
+import fa.training.dto.response.UserPageResponseDTO;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.service.UserService;
 import jakarta.validation.Valid;
@@ -72,5 +73,12 @@ public class UserController {
     public ResponseEntity<ApiResponse<UserResponseDTO>> getUserById(@PathVariable String userId) {
         ApiResponse<UserResponseDTO> response = userService.findByUserId(userId);
         return new ResponseEntity<>(response, HttpStatus.valueOf(response.getCode()));
+    }
+
+    @GetMapping("/{size}/{page}")
+    public ResponseEntity<UserPageResponseDTO> findAllUserPage(
+            @PathVariable("size") Integer size,
+            @PathVariable("page") Integer page) {
+        return ResponseEntity.ok(userService.Paging(size, page));
     }
 }

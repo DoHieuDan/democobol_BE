@@ -4,6 +4,7 @@ import fa.training.accessor.SecUserData_Accessor;
 import fa.training.dto.request.UserRequestDTO;
 import fa.training.dto.request.UserUpdateRequest;
 import fa.training.dto.response.ApiResponse;
+import fa.training.dto.response.UserPageResponseDTO;
 import fa.training.dto.response.UserResponseDTO;
 import fa.training.lib.constants.ValueConst;
 import fa.training.lib.file.FileAccessBase;
@@ -16,10 +17,16 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -60,7 +67,7 @@ public class UserService {
 
         while (!userSecFile.isEOF()) {
             userSecFile.readLine();
-            if (userSecFile.getCurrentLine().substring(0, 8).equals(userId)) {
+            if (userSecFile.getCurrentLine() != null && userSecFile.getCurrentLine().substring(0, 8).equals(userId)) {
                 userSecFile.close();
                 return true;
             }
@@ -147,14 +154,13 @@ public class UserService {
     }
 
     public ApiResponse<Void> deleteUserById(String userId) {
-//        User user = userRepository.findUserByUserId(userId);
         User user = userRepository.findByUserId(userId).orElseThrow(() -> new RuntimeException("User ID NOT found..."));
-        if (user == null) {
+        if (user.isBlock()) {
             return new ApiResponse<>(404, "User not found", null);
         }
         user.setBlock(true);
         userRepository.save(user);
-        return new ApiResponse<>(200, "User successfully blocked", null);
+        return new ApiResponse<>(200, "User deleted successfully", null);
     }
 
     public ApiResponse<UserResponseDTO> findByUserId(String userId) {
@@ -164,5 +170,27 @@ public class UserService {
         }
         UserResponseDTO userResponseDTO = userMapper.toUserResponse(user.orElse(null));
         return new ApiResponse<>(200, "User found", userResponseDTO);
+    }
+
+    public UserPageResponseDTO Paging(Integer size, Integer page) {
+        if (size == null || page == null) {
+            size = 1;
+            page = 1;
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size);
+        Page<User> userPage = userRepository.findAll(pageable);
+
+        List<UserResponseDTO> userDTOs = userPage.getContent().stream()
+                .filter(user -> !user.isBlock())
+                .map(userMapper::toUserResponse)
+                .collect(Collectors.toList());
+
+        return UserPageResponseDTO.builder()
+                .users(userDTOs)
+                .totalUsers(userPage.getTotalElements())
+                .currentPage(page)
+                .totalPages(userPage.getTotalPages())
+                .build();
     }
 }
