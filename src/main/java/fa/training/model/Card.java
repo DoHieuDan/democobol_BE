@@ -1,12 +1,13 @@
 package fa.training.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 
 @Entity
 @Data
@@ -29,8 +30,8 @@ public class Card {
     private String embossedName;
 
     @Column(name = "active_status")
-    private boolean isActive;
+    private String isActive;
 
     @Column(name = "expiration_date")
-    private Date expiryDate;
+    private String expiryDate;
 }

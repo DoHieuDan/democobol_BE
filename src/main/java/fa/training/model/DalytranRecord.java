@@ -18,6 +18,7 @@ import java.math.BigDecimal;
 @Table(name = "daily_tran")
 public class DalytranRecord {
     @Id
+    @Column(name = "id")
     private String dalytranId;
 
     @Column(name = "type_cd")
